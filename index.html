@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Embed Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        #embed-container {
+            width: 100%;
+            height: 600px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PASUPULETI KRISHNA KOUSHIK</h1>
+        <div class="button-container">
+            <button class="button" onclick="loadEmbed('mobile')">TASK 1</button>
+            <button class="button" onclick="loadEmbed('dora')">TASK 4</button>
+            <button class="button" onclick="loadEmbed('srcs')">TASK 3</button>
+        </div>
+        <iframe id="embed-container"></iframe>
+    </div>
+
+    <script>
+        function loadEmbed(type) {
+            const iframe = document.getElementById('embed-container');
+            let src = '';
+
+            switch(type) {
+                case 'mobile':
+                    src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSHJdG0GAe3Ui4mm1F4Mnuo%2FMobile-App-Signup-Flow%3Fnode-id%3D1-3%26t%3DfkSppkisox9o8Tel-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A3';
+                    break;
+                case 'dora':
+                    src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBYYUpvFF3H1tV0ObB2uPXQ%2FE-COMMERCE%3Fnode-id%3D5-10%26t%3D6vm5Q2imb1sKRwr7-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D5%253A10';
+                    break;
+                case 'srcs':
+                    src = 'https://embed.figma.com/proto/1z48ZJgUCQBKIDvI5Y6hri/Menu?node-id=3-11&node-type=frame&m=dev&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2&embed-host=share';
+                    break;
+            }
+
+            iframe.src = src;
+        }
+    </script>
+</body>
+</html>
